@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cms-graphql-deployment
+  name: cms-graphql
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: cms-graphql-deployment
+      app: cms-graphql
   template:
     metadata:
       labels:
-        app: cms-graphql-deployment
+        app: cms-graphql
     spec:
       containers:
         - image: mexverse/verse-cms-graphql:latest
-          name: cms-graphql-deployment
+          name: cms-graphql
           ports:
-            - containerPort: 80
+            - containerPort: 3000
           resources:
             requests:
               memory: "64Mi"
