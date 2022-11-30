@@ -14,7 +14,7 @@ spec:
         app: cms-graphql
     spec:
       containers:
-        - image: mexverse/verse-cms-graphql-test:1.0.0
+        - image: mexverse/cms-graphql:1.0.0
           name: cms-graphql
           ports:
             - containerPort: 3000
